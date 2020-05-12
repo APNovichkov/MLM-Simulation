@@ -158,4 +158,12 @@ public class IBOTimelineTracker implements Tracker{
     public List<List<Long>> getTimeline() {
         return timeline;
     }
+
+    public List<MLMNode> getNodesToTrack() {
+        return nodesToTrack;
+    }
+
+    public List<Integer> getTime() {
+        return time;
+    }
 }

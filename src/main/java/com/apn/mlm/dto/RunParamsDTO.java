@@ -12,14 +12,9 @@ import com.apn.mlm.app.tracker.Tracker;
 
 public class RunParamsDTO {
 
-    public static int simulationLifespan = 36;
-    public static int startMonth = 6;
-    public static int endMonth = 36;
-    public static int numNodesToTrack = 5;
+    public int simulationLifespan = 36;
+    public int startMonth = 6;
+    public int endMonth = 36;
+    public int numNodesToTrack = 5;
 
-    public static Tracker tracker = new IBOTimelineTracker(startMonth, numNodesToTrack, NodeProperty.MONTHLY_INCOME);
-    public static MLMCompany company = new AMWAY();
-
-    public static NodeBehavior nodeBehavior = new BasicNodeBehavior();
-    public static NodePopulation nodePopulation = new DefaultNodePopulation();
 }

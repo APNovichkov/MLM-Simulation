@@ -20,8 +20,9 @@ public class MlmController {
     private MlmService mlmService;
 
     @PostMapping
-    public void runModel(){
-        mlmService.runModel();
+    public void runModel(@RequestBody RunParamsDTO runParams){
+        runParams = new RunParamsDTO();
+        mlmService.runModel(runParams);
     }
 
     @GetMapping(path="ibotimeline")

@@ -10,17 +10,42 @@ public class IBOTimelineTrackerDTO {
     /*
 
     {
-
-
-    }
+        months: [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            ..
+        ],
+        nodes: [
+            {
+                nodeId: 1,
+                values: [64, 78, ..]
+            },
+            {
+                nodeId: 2,
+                values: [75, 144, 254, ..]
+            }
+        ]
+       }
 
 
      */
 
 
     // data
-    public int id;
-    public List<List<Long>> timeline;
+    public List<Integer> months;
+    public List<NodeObject> nodes;
 
+    public static class NodeObject{
+        public int nodeId;
+        public List<Long> values;
+
+        public NodeObject(int nodeId) {
+            this.nodeId = nodeId;
+        }
+    }
 
 }
