@@ -16,13 +16,13 @@ public class NodesStat {
     }
 
     public void calculateStats(List<Long> inputList) {
-        if(inputList.size() != 0) {
+        if (inputList.size() != 0) {
             Collections.sort(inputList);
             min = inputList.get(0);
-            max = inputList.get(inputList.size()-1);
-            median = inputList.get(inputList.size()/2);
-            top10 = inputList.get((int) (inputList.size()*.90));
-            bottom10 = inputList.get((int) (inputList.size()*.1));
+            max = inputList.get(inputList.size() - 1);
+            median = inputList.get(inputList.size() / 2);
+            top10 = inputList.get((int) (inputList.size() * .90));
+            bottom10 = inputList.get((int) (inputList.size() * .1));
         }
     }
 

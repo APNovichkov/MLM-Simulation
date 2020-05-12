@@ -13,9 +13,9 @@ import com.apn.mlm.app.tracker.TrackerType;
 
 public class LocalLauncher {
 
-    private final static int DEFAULT_SIMULATION_LIFESPAN = 20;
-    private final static int DEFAULT_START_MONTH = 5;
-    private final static int DEFAULT_END_MONTH = 10;
+    private final static int DEFAULT_SIMULATION_LIFESPAN = 36;
+    private final static int DEFAULT_START_MONTH = 6;
+    private final static int DEFAULT_END_MONTH = 20;
     private final static int DEFAULT_NUM_NODES_TO_TRACK = 5;
     private final static Tracker DEFAULT_TRACKER = new IBOTimelineTracker(DEFAULT_START_MONTH, DEFAULT_NUM_NODES_TO_TRACK, NodeProperty.MONTHLY_INCOME);
     private final static MLMCompany DEFAULT_MLM_COMPANY = new AMWAY();

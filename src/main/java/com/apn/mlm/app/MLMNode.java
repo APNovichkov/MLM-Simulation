@@ -88,11 +88,9 @@ public class MLMNode {
         if(behavior().isActive()) {
             int nodesCount = behavior().getNumOfMonthlyDownliners(this, population().availableNodes());
             List<MLMNode> nodes = population().fetchNodes(nodesCount, engine);
+            teamSize += nodes.size();
             addDownliners(nodes);
-            teamSize++;
         }
-
-
     }
 
     public void updateDecline() {
@@ -205,7 +203,6 @@ public class MLMNode {
     public void setUpline(MLMNode upliner) {
         this.upliner = upliner;
     }
-
 
     private MLMCompany company() {
         return engine.getMlmCompany();

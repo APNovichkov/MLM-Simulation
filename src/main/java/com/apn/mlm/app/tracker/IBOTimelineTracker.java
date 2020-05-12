@@ -40,7 +40,7 @@ public class IBOTimelineTracker implements Tracker{
 
     @Override
     public void doMonth(MLMNode node, int month) {
-        System.out.println("Doing month for iboTimeline");
+        System.out.println("Doing month #" + month + " for iboTimeline");
         if(month == startMonth) {
             System.out.println("Selecting nodes");
             selectTrackingNodes();
@@ -64,8 +64,6 @@ public class IBOTimelineTracker implements Tracker{
             header.add("IBO Node #" + i);
         }
         nodesToTrack = tmpNodes;
-//		System.out.println("numberOfNodesToTrack = " + numberOfNodesToTrack
-//				+ "\t nodesToTrack.size() = " + nodesToTrack.size());
     }
 
 
@@ -121,7 +119,7 @@ public class IBOTimelineTracker implements Tracker{
 //
 //
 //        return builder.build().toString();
-        return "";
+        return "{hello: hi}";
     }
 
 
@@ -155,4 +153,9 @@ public class IBOTimelineTracker implements Tracker{
         }
     }
 
+
+
+    public List<List<Long>> getTimeline() {
+        return timeline;
+    }
 }
