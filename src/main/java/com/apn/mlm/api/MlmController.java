@@ -19,12 +19,14 @@ public class MlmController {
     @Autowired
     private MlmService mlmService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping
     public void runModel(@RequestBody RunParamsDTO runParams){
         runParams = new RunParamsDTO();
         mlmService.runModel(runParams);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(path="ibotimeline")
     public IBOTimelineTrackerDTO getIBOTimelineData(){
         return mlmService.getIBOTimelineData();
