@@ -17,8 +17,6 @@ public class IBOTimelineTracker implements Tracker{
     private List<MLMNode> nodesToTrack = new ArrayList<>();
     private List<String> header = new ArrayList<>();
 
-//    private Path tsvOutputPath = Paths.get("/Users/apnovichkov/Desktop/MLMOutputs/iboTL.txt");
-
 
     public IBOTimelineTracker(int startMonth, int numberOfNodesToTrack, NodeProperty property) {
         this.startMonth = startMonth;
@@ -88,37 +86,6 @@ public class IBOTimelineTracker implements Tracker{
 
     @Override
     public String toJSON() {
-        //        JsonObjectBuilder builder = Json.createObjectBuilder();
-//        JsonArrayBuilder months = Json.createArrayBuilder();
-
-        //Add months
-//        for(Integer month: time) {
-//            months.add(month);
-//        }
-
-
-        //Add Months and Nodes and their Values
-//        JsonArrayBuilder nodes = Json.createArrayBuilder();
-//        for(int i = 0; i < nodesToTrack.size(); i++) {
-//            JsonObjectBuilder node = Json.createObjectBuilder();
-//            JsonArrayBuilder properties = Json.createArrayBuilder();
-//            MLMNode currentNode = nodesToTrack.get(i);
-//
-//
-//            for(List<Long> monthProps: timeline) {
-//                properties.add(monthProps.get(i));
-//            }
-//
-//            node.add("nodeId",currentNode.getId());
-//            node.add("values", properties);
-//            nodes.add(node);
-//        }
-//
-//        builder.add("months", months);
-//        builder.add("nodes", nodes);
-//
-//
-//        return builder.build().toString();
         return "{hello: hi}";
     }
 
