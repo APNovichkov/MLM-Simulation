@@ -12,6 +12,7 @@ import com.apn.mlm.app.behavior.BasicNodeBehavior;
 import com.apn.mlm.app.behavior.NodeBehavior;
 import com.apn.mlm.app.company.AMWAY;
 import com.apn.mlm.app.company.MLMCompany;
+import com.apn.mlm.app.population.CustomNodePopulation;
 import com.apn.mlm.app.population.DefaultNodePopulation;
 import com.apn.mlm.app.population.NodePopulation;
 import com.apn.mlm.app.tracker.IBOTimelineTracker;
@@ -36,7 +37,7 @@ public class MlmService {
         MLMCompany company = new AMWAY();
 
         NodeBehavior nodeBehavior = new BasicNodeBehavior();
-        NodePopulation nodePopulation = new DefaultNodePopulation();
+        NodePopulation nodePopulation = new CustomNodePopulation(runParams.defaultPopulationSize, runParams.defaultMonthlyPopulationIncrease);
 
         engine = new MLMEngine();
 

@@ -12,9 +12,13 @@ import com.apn.mlm.app.tracker.Tracker;
 
 public class RunParamsDTO {
 
-    public int simulationLifespan = 36;
-    public int startMonth = 6;
-    public int endMonth = 36;
-    public int numNodesToTrack = 5;
+    public int simulationLifespan = 60;
+    public int startMonth = 20;
+    public int endMonth = 50;
+    public int numNodesToTrack = 10;
+
+    // Population
+    public int defaultPopulationSize = 100000;
+    public int defaultMonthlyPopulationIncrease = 0;
 
 }

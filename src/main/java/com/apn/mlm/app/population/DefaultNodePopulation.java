@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DefaultNodePopulation implements NodePopulation{
-    private int populationSize = 1000000;
+    private int populationSize = 1000;
+    private final int MONTHLY_GROWTH = 0;
 
     @Override
     public int size() {
@@ -26,7 +27,7 @@ public class DefaultNodePopulation implements NodePopulation{
     @Override
     public void monthlyUpdate() {
         // Population grows by 10k every month
-        populationSize += 10000;
+        populationSize += MONTHLY_GROWTH;
     }
 
     @Override
